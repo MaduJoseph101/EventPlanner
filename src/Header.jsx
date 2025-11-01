@@ -27,7 +27,7 @@ function Header() {
             {/* Mobile Menu Button */}
             <div className='md:hidden z-40'>
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#222831]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 active:text-[#e4a238] transition-all duration-600text-[#222831]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
@@ -40,9 +40,9 @@ function Header() {
         )}
 
          {/* MOBILE NAV MENU */}
-        <nav className={`fixed top-0 right-0 h-full w-[270px] max-w-sm bg-[#fffffff3] backdrop-blur-2xl z-30 transform transition-transform duration-700 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <nav className={`fixed top-0 right-0 h-full w-[270px] max-w-sm bg-[#fffffff3] backdrop-blur-2xl z-30 transform transition-transform border-l-2 border-[#e4a238a8] duration-700 ease-in-out md:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         
-            <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu" className="absolute top-5 right-5 text-[#222831]">
+            <button onClick={() => setIsMenuOpen(false)} aria-label="Close menu" className="absolute top-5 right-5 text-[#222831] active:text-[#e4a238] ">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
 
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
