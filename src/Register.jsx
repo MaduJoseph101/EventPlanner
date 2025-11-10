@@ -8,6 +8,7 @@ function Register() {
         description: "Annual university-wide debate tournament.",
         location: "Legacy Hall",
         date: "24-11-2025",
+        time: "10:00 AM",
         imageUrl: "debate.jpg"
     },
     {
@@ -16,6 +17,7 @@ function Register() {
         description: "A week of tech talks, workshops, and hackathons.",
         location: "School Multipurpose Hall",
         date: "12-01-2026",
+        time: "09:00 AM",
         imageUrl: "tech.jpg"
 
     },
@@ -25,6 +27,7 @@ function Register() {
         description: "Empowering the next generation of student leaders.",
         location: "Student Recreation Center",
         date: "02-12-2025",
+        time: "11:00 AM",
         imageUrl: "student.jpg"
     },
 
@@ -34,6 +37,7 @@ function Register() {
         description: " A student event showcasing creativity and innnovation",
         location: "University Sports Complex",
         date: "15-05-2026",
+        time: "10:30 AM",
         imageUrl: "trade_fair.jpg"
     },
     
@@ -43,6 +47,7 @@ function Register() {
         description: "Monthly meeting for all student council representatives.",
         location: "Senate Building, Room 201",
         date: "05-06-2026",
+        time: "02:00 PM",
         imageUrl: "meeting.jpg"
     },
 
@@ -52,6 +57,7 @@ function Register() {
         description: "A day of fun, sports, and team spirit.",
         location: "University Sports Complex",
         date: "10-05-2026",
+        time: "08:00 AM",
         imageUrl: "sports.jpg"
     },
 
@@ -61,6 +67,7 @@ function Register() {
         description: "Showcasing student talent in art, music, and drama.",
         location: "Fine Arts Auditorium",
         date: "20-04-2026",
+        time: "01:00 PM",
         imageUrl: "art.jpg"
     },
 
@@ -70,6 +77,7 @@ function Register() {
         description: "Connect with top employers and explore career opportunities.",
         location: "Multipurpose Hall",
         date: "15-11-2026",
+        time: "09:30 AM",
         imageUrl: "career.jpg"
     },
 
@@ -79,6 +87,7 @@ function Register() {
         description: "An evening of live music from student bands and local artists.",
         location: "Legacy Hall",
         date: "28-05-2026",
+        time: "06:00 PM",
         imageUrl: "music.jpg"
     },
 
@@ -88,6 +97,7 @@ function Register() {
         description: "Discover groundbreaking projects from our science and engineering students.",
         location: "Engineering Faculty Building",
         date: "03-03-2026",
+        time: "10:00 AM",
         imageUrl: "science.jpg"
     },
     ]
@@ -106,7 +116,8 @@ function Register() {
                     <h1 className='text-4xl md:text-5xl font-bold text-white text-center mb-12 lg:mb-16'>Upcoming Events</h1>
 
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                        {events.map((event, index) =>
+                        {
+                        events.map((event, index) =>
                         
                         (
                             <div key={index} className='bg-[#393E46] rounded-xl shadow-lg flex flex-col justify-between transition-transform transform hover:scale-105 duration-300 overflow-hidden'>
@@ -125,6 +136,8 @@ function Register() {
                                             <p><span className='font-semibold'>Location:</span> {event.location}</p>
 
                                             <p><span className='font-semibold'>Date:</span> {event.date}</p>
+
+                                            <p><span className='font-semibold'>Time:</span> {event.time}</p>
                                         </div>
                                     </div>
 

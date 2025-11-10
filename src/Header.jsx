@@ -12,7 +12,7 @@ function Header() {
   return (
         <>
         <header className='sticky top-0 flex h-[9vh] md:h-[13vh]  uppercase bg-[#ffffff] justify-between items-center px-6 md:px-10 text-[#222831] font-bold z-30'>
-            <h1 className=' text-2xl'>BITXBASE</h1>
+            <h1 className=' text-2xl select-none'>BITXBASE</h1>
 
              {/* DESKTOP NAVIGATION */}
             <nav className='hidden md:flex items-center'>

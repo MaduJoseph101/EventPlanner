@@ -8,13 +8,32 @@ function AddEvent() {
     description: "",
     location: "",
     date: "",
-    eventImage: null,
+    time: "",
+    organizer: "",
+    ticket: "",
+    eventposter: null,
   })
 
    let handleChange =(data)=>{
+    // HANDLES POSTER UPLODED
     if (data.target.type === 'file') {
       setEventData({...eventdata, [data.target.name]: data.target.files[0] });
     } 
+
+
+    else if (data.target.type === 'time') {
+
+      const time = data.target.value;
+      const [hours, minutes] = time.split(':');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      let hours12 = hours % 12;
+      if (hours12 == 0) { 
+        hours12 = 12;
+      }
+      const formattedTime = `${hours12}:${minutes} ${ampm}`;
+      setEventData({...eventdata, [data.target.name]: formattedTime });
+
+    }
     
     else {
       setEventData({...eventdata, [data.target.name]: data.target.value });
@@ -34,7 +53,7 @@ function AddEvent() {
         <h1 className="text-3xl font-bold mb-8 text-center text-[#FFD369]">Add a New Event</h1>
         
         <form onSubmit={SubmitForm}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-9">
             {/* Event Title Field - Spans both columns */}
             <div className="md:col-span-2">
               <label htmlFor="title" className="block text-sm font-bold mb-2 uppercase tracking-wider">Event Title</label>
@@ -45,6 +64,19 @@ function AddEvent() {
                 id="title" 
                 className="w-full p-3 capitalize rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
                 placeholder="e.g., Tech Conference 2026"
+                required
+              />
+            </div>
+
+             <div className="md:col-span-2">
+              <label htmlFor="title" className="block text-sm font-bold mb-2 uppercase tracking-wider">Organizer</label>
+              <input 
+              onChange={handleChange}
+                type="text" 
+                name="organizer"
+                id="organizer" 
+                className="w-full p-3 capitalize rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                placeholder="Department or School body organizing the event"
                 required
               />
             </div>
@@ -98,15 +130,40 @@ function AddEvent() {
               />
             </div>
 
-            {/* Image Upload Field - Spans both columns */}
+            <div>
+              <label htmlFor="time" className="block text-sm font-bold mb-2 uppercase tracking-wider">Time</label>
+              <input 
+              onChange={handleChange}
+                type="time" 
+                name="time"
+                id="time" 
+                className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                required
+              />
+            </div>
+
+             <div>
+              <label htmlFor="ticket" className="block text-sm font-bold mb-2 uppercase tracking-wider">Ticket Price (optional)</label>
+              <input 
+              onChange={handleChange}
+                type="number" 
+                name="ticket"
+                id="ticket" 
+                className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                placeholder="e.g., Free, ₦2000, ₦5000"
+                
+              />
+            </div>
+
+
             <div className="md:col-span-2">
-              <label htmlFor="eventImage" className="block text-sm font-bold mb-2 uppercase tracking-wider">Event Image</label>
+              <label htmlFor="eventImage" className="block text-sm font-bold mb-2 uppercase tracking-wider">Event Poster</label>
               <input
               onChange={handleChange}
                 type="file"
-                name="eventImage"
-                id="eventImage"
-                className="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#FFD369] file:text-[#222831] hover:file:bg-yellow-500 cursor-pointer"
+                name="eventposter"
+                id="eventposter"
+                className="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-[#FFD369] file:text-[#222831] hover:file:bg-yellow-500 file:cursor-pointer"
                 accept="image/png, image/jpeg, image/jpg"
                 required
               />

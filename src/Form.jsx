@@ -19,7 +19,7 @@ function Form() {
     fullname: "",
     level: "",
     matric_number: "",
-    email: ""
+    department: "",
   });
 
   const [notification, setNotification] = useState(
@@ -32,7 +32,6 @@ function Form() {
 
   let InputChange =(data)=>{
     setStudentData({...StudentData, [data.target.name]: data.target.value })
-    console.log(StudentData);
   }
 
   // SUBMIT FUNCTION
@@ -79,6 +78,7 @@ function Form() {
             <div className="text-gray-400 space-y-2">
               <p><span className='font-semibold'>Location:</span> {event.location}</p>
               <p><span className='font-semibold'>Date:</span> {event.date}</p>
+              <p><span className='font-semibold'>Time:</span> {event.time}</p>
             </div>
           </div>
 
@@ -115,6 +115,18 @@ function Form() {
                 </div>
 
                 <div>
+                  <label htmlFor="department" className="block text-sm font-bold mb-2 uppercase tracking-wider">Department</label>
+                  <input 
+                    type="text" 
+                    name='department'
+                    id="department" 
+                    className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                    required
+                    onChange={InputChange}
+                  />
+                </div>
+
+                <div>
                   <label htmlFor="matric_number" className="block text-sm font-bold mb-2 uppercase tracking-wider">Matric Number</label>
                   <input 
                     type="number" 
@@ -129,22 +141,10 @@ function Form() {
                 </div>
               </div>
 
-              <div className="mt-6 mb-8">
-                <label htmlFor="email" className="block text-sm font-bold mb-2 uppercase">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name='email'
-                  className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
-                  placeholder="your.email@example.com"
-                  required
-                    onChange={InputChange}
 
-                />
-              </div>
               <button 
                 type="submit" 
-                className="w-full bg-[#e4a238] text-white font-bold py-3 px-4 rounded-lg hover:bg-yellow-500 cursor-pointer transition-transform transform hover:scale-[1.02] duration-300"
+                className="mt-8 w-full bg-[#e4a238] text-white font-bold py-3 px-4 rounded-lg hover:bg-yellow-500 cursor-pointer transition-transform transform hover:scale-[1.02] duration-300"
               >
                 Register Now
               </button>

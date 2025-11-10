@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Homepage() {
   return (
     <>
-        <main className='relative  h-[100dvh] bg-cover bg-center bg-[url(homebackground.jpg)]   bg-blend-darken bg-[#00000077] flex items-center justify-center p-4'>
+    <main className='relative  h-[100dvh] bg-cover bg-center bg-[url(homebackground.jpg)]   bg-blend-darken bg-[#00000077] flex items-center justify-center p-4'>
             <div className='absolute inset-0 w-full h-full backdrop-blur-[3px]'></div>
 
             <div className='relative z-10 text-center max-w-3xl'>
