@@ -76,7 +76,7 @@ function AddEvent() {
                 name="organizer"
                 id="organizer" 
                 className="w-full p-3 capitalize rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
-                placeholder="Department or School body organizing the event"
+                placeholder="Department or School body"
                 required
               />
             </div>
@@ -88,9 +88,8 @@ function AddEvent() {
               onChange={handleChange}
                 name="description"
                 id="description"
-                rows="4"
-                className="w-full h-[300px] p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
-                placeholder="A brief summary of the event, not more than 15 words..."
+                className="w-full min-h-[200px] max-h-[200px] p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                placeholder="A brief summary of the event"
                 required
               ></textarea>
             </div>
@@ -111,7 +110,6 @@ function AddEvent() {
                 <option value="University Sports Complex">University Sports Complex</option>
                 <option value="Senate Building, Room 201">Senate Building, Room 201</option>
                 <option value="Fine Arts Auditorium">Fine Arts Auditorium</option>
-                <option value="Legacy Hall">Legacy Hall</option>
                 <option value="Multipurpose Hall">Multipurpose Hall</option>
                 <option value="Engineering Faculty Building">Engineering Faculty Building</option>
               </select>
@@ -157,7 +155,7 @@ function AddEvent() {
 
 
             <div className="md:col-span-2">
-              <label htmlFor="eventImage" className="block text-sm font-bold mb-2 uppercase tracking-wider">Event Poster</label>
+              <label htmlFor="eventposter" className="block text-sm font-bold mb-2 uppercase tracking-wider">Event Poster</label>
               <input
               onChange={handleChange}
                 type="file"

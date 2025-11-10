@@ -16,7 +16,7 @@ function Homepage() {
                 </p>
                 
                 <div className='mt-16 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-6'>
-                    <Link to="/addEvent">
+                    <Link to="/admin">
                         <button className='w-full sm:w-auto cursor-pointer px-8 py-3 bg-[#e4a238] text-[#222831] font-bold rounded-lg hover:bg-yellow-500 transition-all transform hover:scale-[1.03] duration-300 shadow-lg hover:shadow-xl'>
                             Create an Event
                         </button>

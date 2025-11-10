@@ -105,7 +105,7 @@ function About() {
                 <ul className="space-y-2">
                   <li><a href="/" className="text-gray-400 hover:text-[#e4a238]">Home</a></li>
                   <li><a href="/register" className="text-gray-400 hover:text-[#e4a238]">Register for an Event</a></li>
-                  <li><a href="/addEvent" className="text-gray-400 hover:text-[#e4a238]">Create Event</a></li>
+                  <li><a href="/admin" className="text-gray-400 hover:text-[#e4a238]">Create Event</a></li>
                 </ul>
               </div>
 

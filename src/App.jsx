@@ -5,6 +5,7 @@ import About from './About.jsx';
 import Header from './Header.jsx';
 import Resgister from './Register.jsx';
 import AddEvent from './AddEvent.jsx';
+import AdminAunthentication from './AdminAunthentication.jsx';  
 import FormConfirmation from './FormConfirmation.jsx';
 import CreatedEventConfirmation from './CreatedEventConfirmation.jsx';
 import Form from './Form.jsx';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
         <Route path="/addEvent" element={<AddEvent />} />
+        <Route path="/admin" element={<AdminAunthentication />} />
         <Route path="/register" element={<Resgister />} />
         <Route path="/form" element={<Form />} />
         <Route path="/formconfirmation" element={<FormConfirmation />} />

@@ -19,8 +19,8 @@ function Header() {
                 <ol className='flex gap-8 text-[18px] cursor-pointer'>
                     <li><NavLink to="/" className={getNavLinkClass}>Home</NavLink></li>
                     <li><NavLink to="/about" className={getNavLinkClass}>About</NavLink></li>
-                    <li><NavLink to="/register" className={getNavLinkClass}>Register</NavLink></li>
-                    <li><NavLink to="/addEvent" className={getNavLinkClass}>Add Event</NavLink></li>
+                    <li><NavLink to="/register" className={({ isActive }) => isActive ? activeClassName : inactiveClassName}>Register</NavLink></li>
+                    <li><NavLink to="/admin" className={({ isActive }) => (isActive || location.pathname === '/addEvent') ? activeClassName : inactiveClassName}>Add Event</NavLink></li>
                 </ol>
             </nav>
 
@@ -50,13 +50,13 @@ function Header() {
             </button>
             
             <ol className='flex flex-col items-center justify-center h-full gap-8 uppercase text-[#222831] font-bold'>
-                <li><NavLink to="/" className={getNavLinkClass} onClick={() => setIsMenuOpen(false)}>Home</NavLink></li>
+                <li><NavLink to="/" className={({ isActive }) => isActive ? activeClassName : inactiveClassName} onClick={() => setIsMenuOpen(false)}>Home</NavLink></li>
 
-                <li><NavLink to="/about" className={getNavLinkClass} onClick={() => setIsMenuOpen(false)}>About</NavLink></li>
+                <li><NavLink to="/about" className={({ isActive }) => isActive ? activeClassName : inactiveClassName} onClick={() => setIsMenuOpen(false)}>About</NavLink></li>
 
-                <li><NavLink to="/register" className={getNavLinkClass} onClick={() => setIsMenuOpen(false)}>Register</NavLink></li>
+                <li><NavLink to="/register" className={({ isActive }) => isActive ? activeClassName : inactiveClassName} onClick={() => setIsMenuOpen(false)}>Register</NavLink></li>
                 
-                <li><NavLink to="/addEvent" className={getNavLinkClass} onClick={() => setIsMenuOpen(false)}>Add Event</NavLink></li>
+                <li><NavLink to="/admin" className={({ isActive }) => (isActive || location.pathname === '/addEvent') ? activeClassName : inactiveClassName} onClick={() => setIsMenuOpen(false)}>Add Event</NavLink></li>
             </ol>
         </nav>
 

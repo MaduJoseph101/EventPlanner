@@ -120,7 +120,7 @@ function Form() {
                     type="text" 
                     name='department'
                     id="department" 
-                    className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                    className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring capitalize focus:ring-[rgb(255,211,105)] focus:ring-opacity-50 transition-colors duration-300"
                     required
                     onChange={InputChange}
                   />

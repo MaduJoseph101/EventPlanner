@@ -47,10 +47,10 @@ function CreatedEventConfirmation() {
         {/* Proposal Summary Card */}
         <div className="mt-8 bg-[#222831] rounded-lg shadow-inner p-6">
           <div className="space-y-6">
-            {details.eventImage && (
+            {details.eventposter && (
               <img
                 className='w-full h-48 md:h-64 object-cover object-center rounded-lg'
-                src={URL.createObjectURL(details.eventImage)}
+                src={URL.createObjectURL(details.eventposter)}
                 alt={details.title}
               />
             )}
@@ -80,6 +80,7 @@ function CreatedEventConfirmation() {
                 </div>
               </div>
               <div>
+                
                 <div className="flex items-center text-gray-300">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
                   <span className="font-semibold">{details.ticket ? `₦${details.ticket}` : 'Free'}</span>
