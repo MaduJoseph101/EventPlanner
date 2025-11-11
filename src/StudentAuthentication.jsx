@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function AdminAunthentication() {
+function StudentAuthentication() {
 
 let AdminDetails = {
-    username: "Admin",
+    username: "Student",
     password: 220502043,
 };
 
@@ -29,7 +29,7 @@ let handleSubmit =(e)=>{
   const enteredPassword = password.current.value.trim();
 
   if (enteredUserName.toLowerCase() === AdminDetails.username.toLowerCase() && enteredPassword === String(AdminDetails.password)) {
-    navigate('/presidentsapproval');
+    navigate('/register');
   }
     else {
 
@@ -62,7 +62,7 @@ let handleSubmit =(e)=>{
         </div>
 
 
-        <h1 className="text-3xl font-bold mb-8 text-center text-[#FFD369]">Admin Authentication</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center text-[#FFD369]">Student Authentication</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="space-y-6">
@@ -80,12 +80,10 @@ let handleSubmit =(e)=>{
                   required
                   ref={userName}
                 />
-
                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
-                  
                 </div>
               </div>
             </div>
@@ -143,4 +141,4 @@ let handleSubmit =(e)=>{
     )
 }
 
-export default AdminAunthentication
+export default StudentAuthentication

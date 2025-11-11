@@ -24,6 +24,7 @@ function AddEvent() {
     else if (data.target.type === 'time') {
 
       const time = data.target.value;
+      
       const [hours, minutes] = time.split(':');
       const ampm = hours >= 12 ? 'PM' : 'AM';
       let hours12 = hours % 12;
@@ -43,6 +44,15 @@ function AddEvent() {
   let navigate = useNavigate();
   let SubmitForm =(e)=>{
     e.preventDefault();
+
+    // // Save the event proposal to localStorage
+    // const existingProposals = JSON.parse(localStorage.getItem('proposedEvents')) || [];
+    // const newProposal = { 
+    //   ...eventdata, 
+    //   id: Date.now(), // Simple unique ID
+    //   status: 'pending' 
+    // };
+    // localStorage.setItem('proposedEvents', JSON.stringify([...existingProposals, newProposal]));
 
     navigate('/createdeventconfirmation', { state: { eventdetails: eventdata }} )
   }

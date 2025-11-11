@@ -39,7 +39,10 @@ function Form() {
     e.preventDefault();
 
     if (StudentData.matric_number.length !== 9) {
-      setNotification({ show: true, message: 'Invalid Matric Number.' });
+      setNotification({ 
+        show: true, 
+        message: 'Invalid Matric Number.'
+       });
       
       const timer = setTimeout(() => setNotification({ show: false, message: 'Invalid Matric Number.' }), 3000);
       return;

@@ -111,43 +111,43 @@ function Register() {
 
     return (
         <>
-            <div className='min-h-screen bg-[#222831] py-12 px-4 sm:px-6 lg:px-8'>
-                <div className='max-w-7xl mx-auto'>
-                    <h1 className='text-4xl md:text-5xl font-bold text-white text-center mb-12 lg:mb-16'>Upcoming Events</h1>
+<div className='min-h-screen bg-[#222831] py-12 px-4 sm:px-6 lg:px-8'>
+    <div className='max-w-7xl mx-auto'>
+        <h1 className='text-4xl md:text-5xl font-bold text-white text-center mb-12 lg:mb-16'>Upcoming Events</h1>
 
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                        {
-                        events.map((event, index) =>
-                        
-                        (
-                            <div key={index} className='bg-[#393E46] rounded-xl shadow-lg flex flex-col justify-between transition-transform transform hover:scale-105 duration-300 overflow-hidden'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {
+            events.map((event, index) =>
+            
+            (
+                <div key={index} className='bg-[#393E46] rounded-xl shadow-lg flex flex-col justify-between transition-transform transform hover:scale-105 duration-300 overflow-hidden'>
 
-                                <img className='w-full h-48 object-cover bg-center' src={event.imageUrl} alt={event.title} />
+                    <img className='w-full h-48 object-cover bg-center' src={event.imageUrl} alt={event.title} />
 
-                                <div className='p-6 flex flex-col grow'>
+                    <div className='p-6 flex flex-col grow'>
 
-                                    <div className='grow'>
+                        <div className='grow'>
 
-                                        <h2 className='text-2xl font-bold text-white mb-2'>{event.title}</h2>
+                            <h2 className='text-2xl font-bold text-white mb-2'>{event.title}</h2>
 
-                                        <p className='text-gray-300 mb-4'>{event.description}</p>
-                                        <div className='text-gray-400 space-y-2'>
+                            <p className='text-gray-300 mb-4'>{event.description}</p>
+                            <div className='text-gray-400 space-y-2'>
 
-                                            <p><span className='font-semibold'>Location:</span> {event.location}</p>
+                                <p><span className='font-semibold'>Location:</span> {event.location}</p>
 
-                                            <p><span className='font-semibold'>Date:</span> {event.date}</p>
+                                <p><span className='font-semibold'>Date:</span> {event.date}</p>
 
-                                            <p><span className='font-semibold'>Time:</span> {event.time}</p>
-                                        </div>
-                                    </div>
-
-                                    <button onClick={() => Register(event)} className='mt-6 w-full px-6 cursor-pointer py-3 bg-[#222831] text-white font-bold rounded-lg hover:bg-gray-900 transition-colors duration-300'>Register Now</button>
-                                </div>
+                                <p><span className='font-semibold'>Time:</span> {event.time}</p>
                             </div>
-                        ))}
+                        </div>
+
+                        <button onClick={() => Register(event)} className='mt-6 w-full px-6 cursor-pointer py-3 bg-[#222831] text-white font-bold rounded-lg hover:bg-gray-900 transition-colors duration-300'>Register Now</button>
                     </div>
                 </div>
-            </div>
+            ))}
+        </div>
+    </div>
+</div>
         </>
     )
 }

@@ -10,7 +10,7 @@ function CreatedEventConfirmation() {
 
   useEffect(() => {
     if (countdown === 0) {
-      navigate('/addEvent');
+      navigate('/presidentsapproval');
       return;
     }
 
@@ -44,7 +44,6 @@ function CreatedEventConfirmation() {
           <p className="text-gray-300">Thank you! Your event proposal has been received and is pending review.</p>
         </div>
 
-        {/* Proposal Summary Card */}
         <div className="mt-8 bg-[#222831] rounded-lg shadow-inner p-6">
           <div className="space-y-6">
             {details.eventposter && (
