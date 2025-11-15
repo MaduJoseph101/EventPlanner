@@ -15,7 +15,7 @@ import PresidentsApproval from './PresidentsApproval.jsx';
 function App() {
 
   const location = useLocation();
-  const showHeader = location.pathname !== '/' && location.pathname !== '/formconfirmation' && location.pathname !== '/createdeventconfirmation';
+  const showHeader = location.pathname !== '/formconfirmation' && location.pathname !== '/createdeventconfirmation';
 
   return (
     <>

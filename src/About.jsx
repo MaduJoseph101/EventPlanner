@@ -34,7 +34,8 @@ function About() {
   return (
     <>
       <div className="bg-[#222831] text-white">
-        {/* Hero Section */}
+
+        {/* HERO SECTION*/}
         <section className="py-20 md:py-32 text-center bg-[#393E46] bg-opacity-50" data-aos="fade-up">
           <div className="container mx-auto px-6">
             <h1 className="text-4xl md:text-6xl font-bold text-[#FFD369] mb-4">About BITXBASE</h1>
@@ -44,7 +45,7 @@ function About() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* TESTIMONIAL SECTION */}
         <section className="py-16 md:py-24">
 
           <div className="container mx-auto px-6">
@@ -68,7 +69,7 @@ function About() {
           </div>
         </section>
 
-        {/* Gallery Section */}
+        {/* GALLERY SECTION*/}
         <section className="py-16 md:py-24 bg-[#393E46] bg-opacity-50">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#FFD369]">Glimpses of Our Events</h2>
@@ -91,7 +92,7 @@ function About() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* FOOTER */}
         <footer className="bg-[#222831] border-t border-gray-700 py-12">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
@@ -104,7 +105,7 @@ function About() {
                 <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                   <li><a href="/" className="text-gray-400 hover:text-[#e4a238]">Home</a></li>
-                  <li><a href="/register" className="text-gray-400 hover:text-[#e4a238]">Register for an Event</a></li>
+                  <li><a href="/student" className="text-gray-400 hover:text-[#e4a238]">Register for an Event</a></li>
                   <li><a href="/admin" className="text-gray-400 hover:text-[#e4a238]">Create Event</a></li>
                 </ul>
               </div>

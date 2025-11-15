@@ -42,6 +42,7 @@ function AddEvent() {
   }
 
   let navigate = useNavigate();
+
   let SubmitForm =(e)=>{
     e.preventDefault();
 
@@ -64,9 +65,10 @@ function AddEvent() {
         
         <form onSubmit={SubmitForm}>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-9">
-            {/* Event Title Field - Spans both columns */}
+            {/* EVENT NAME */}
             <div className="md:col-span-2">
               <label htmlFor="title" className="block text-sm font-bold mb-2 uppercase tracking-wider">Event Title</label>
+
               <input 
               onChange={handleChange}
                 type="text" 
@@ -91,7 +93,7 @@ function AddEvent() {
               />
             </div>
 
-            {/* Description Field - Spans both columns */}
+            {/*DESCRIPTION OF EVENT*/}
             <div className="md:col-span-2">
               <label htmlFor="description" className="block text-sm font-bold mb-2 uppercase tracking-wider">Description</label>
               <textarea
@@ -104,14 +106,14 @@ function AddEvent() {
               ></textarea>
             </div>
 
-            {/* Location Field - Left column */}
+            {/* LOCATION OF EVENT */}
             <div>
               <label htmlFor="location" className="block text-sm font-bold mb-2 uppercase tracking-wider">Location</label>
               <select 
               onChange={handleChange}
                 name="location"
                 id="location" 
-                className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                className="w-full p-3 cursor-pointer rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
                 required
               >
                 <option value="" disabled selected >--Select a location--</option>
@@ -125,15 +127,15 @@ function AddEvent() {
               </select>
             </div>
 
-            {/* Date Field - Right column */}
+            {/*DATE OF THE EVENT */}
             <div>
-              <label htmlFor="date" className="block text-sm font-bold mb-2 uppercase tracking-wider">Date</label>
+              <label htmlFor="date" className="block cursor-pointer text-sm font-bold mb-2 uppercase tracking-wider">Date</label>
               <input 
               onChange={handleChange}
                 type="date" 
                 name="date"
                 id="date" 
-                className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                className="w-full p-3 cursor-pointer rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
                 required
               />
             </div>
@@ -145,7 +147,7 @@ function AddEvent() {
                 type="time" 
                 name="time"
                 id="time" 
-                className="w-full p-3 rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
+                className="w-full p-3 cursor-pointer rounded bg-[#222831] border border-gray-600 focus:border-[#FFD369] focus:ring focus:ring-[#FFD369] focus:ring-opacity-50 transition-colors duration-300"
                 required
               />
             </div>

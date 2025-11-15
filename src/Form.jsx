@@ -49,6 +49,7 @@ function Form() {
     }
 
     navigate('/formconfirmation', { state: { formdetails: {...StudentData, ...event } } });
+    navigate('/formconfirmation', { state: { formdetails: { ...StudentData, ...event } } });
 
   }
 
@@ -82,6 +83,7 @@ function Form() {
               <p><span className='font-semibold'>Location:</span> {event.location}</p>
               <p><span className='font-semibold'>Date:</span> {event.date}</p>
               <p><span className='font-semibold'>Time:</span> {event.time}</p>
+              <p><span className='font-semibold'>Ticket:</span> {event.ticket ? `₦${event.ticket}` : 'Free'}</p>
             </div>
           </div>
 

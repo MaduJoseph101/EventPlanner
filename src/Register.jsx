@@ -9,6 +9,7 @@ function Register() {
         location: "Legacy Hall",
         date: "24-11-2025",
         time: "10:00 AM",
+        ticket: 3000,
         imageUrl: "debate.jpg"
     },
     {
@@ -18,6 +19,7 @@ function Register() {
         location: "School Multipurpose Hall",
         date: "12-01-2026",
         time: "09:00 AM",
+        ticket: 2000,
         imageUrl: "tech.jpg"
 
     },
@@ -28,6 +30,7 @@ function Register() {
         location: "Student Recreation Center",
         date: "02-12-2025",
         time: "11:00 AM",
+        ticket: "",
         imageUrl: "student.jpg"
     },
 
@@ -38,6 +41,7 @@ function Register() {
         location: "University Sports Complex",
         date: "15-05-2026",
         time: "10:30 AM",
+        ticket: "",
         imageUrl: "trade_fair.jpg"
     },
     
@@ -48,6 +52,7 @@ function Register() {
         location: "Senate Building, Room 201",
         date: "05-06-2026",
         time: "02:00 PM",
+        ticket: "",
         imageUrl: "meeting.jpg"
     },
 
@@ -58,6 +63,7 @@ function Register() {
         location: "University Sports Complex",
         date: "10-05-2026",
         time: "08:00 AM",
+        ticket: 1500, 
         imageUrl: "sports.jpg"
     },
 
@@ -68,6 +74,7 @@ function Register() {
         location: "Fine Arts Auditorium",
         date: "20-04-2026",
         time: "01:00 PM",
+        ticket: 2000,
         imageUrl: "art.jpg"
     },
 
@@ -78,6 +85,7 @@ function Register() {
         location: "Multipurpose Hall",
         date: "15-11-2026",
         time: "09:30 AM",
+        ticket: "",         
         imageUrl: "career.jpg"
     },
 
@@ -88,6 +96,7 @@ function Register() {
         location: "Legacy Hall",
         date: "28-05-2026",
         time: "06:00 PM",
+        ticket: 2500,
         imageUrl: "music.jpg"
     },
 
@@ -98,6 +107,7 @@ function Register() {
         location: "Engineering Faculty Building",
         date: "03-03-2026",
         time: "10:00 AM",
+        ticket: "",
         imageUrl: "science.jpg"
     },
     ]
@@ -138,6 +148,8 @@ function Register() {
                                 <p><span className='font-semibold'>Date:</span> {event.date}</p>
 
                                 <p><span className='font-semibold'>Time:</span> {event.time}</p>
+
+                                <p><span className='font-semibold'>Ticket:</span> {event.ticket ? `₦${event.ticket}` : 'Free'}</p>
                             </div>
                         </div>
 

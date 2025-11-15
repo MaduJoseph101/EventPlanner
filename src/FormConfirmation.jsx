@@ -7,7 +7,7 @@ function FormConfirmation() {
 
   const details = location.state?.formdetails;
 
-  const [countdown, setCountdown] = useState(15);
+  const [countdown, setCountdown] = useState(10);
 
   useEffect(() => {
     if (countdown === 0) {
@@ -29,6 +29,15 @@ function FormConfirmation() {
       </div>
     );
   }
+
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth();
+let year = date.getFullYear();
+
+
+
+
 
   return (
     <div className="min-h-screen bg-[#222831] text-white p-4 sm:p-8 flex flex-col items-center justify-center md:p-10 lg:p-12">
@@ -71,9 +80,11 @@ function FormConfirmation() {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               <span className='md:text-lg'>{details.time}</span>
             </div>
-            
-           
 
+            <div className="flex items-center text-gray-300 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
+              <span className='md:text-lg'>{details.ticket ? `₦${details.ticket}` : 'Free'}</span>
+            </div>
             
           </div>
 
@@ -90,14 +101,22 @@ function FormConfirmation() {
                 <p className="text-xs text-gray-400 md:text-sm">Matric Number</p>
                 <p className="font-semibold md:text-lg">{details.matric_number}</p>
               </div>
+
               <div>
                 <p className="text-xs text-gray-400 md:text-sm">Department</p>
                 <p className="font-semibold capitalize md:text-lg">{details.department}</p>
               </div>
+
               <div>
                 <p className="text-xs text-gray-400 md:text-sm">Level</p>
                 <p className="font-semibold md:text-lg">{details.level}</p>
               </div>
+
+               <div>
+                <p className="text-xs text-gray-400 md:text-sm">Registration Date</p>
+                <p className="font-semibold md:text-lg">{day}-{month}-{year}</p>
+              </div>
+
             </div>
           </div>
         </div>
