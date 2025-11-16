@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BackButton from './Backbutton';
 
 function ApprovalPage() {
   const [proposedEvents, setProposedEvents] = useState([]);
@@ -30,7 +31,8 @@ function ApprovalPage() {
   };
 
   return (
-    <div className="min-h-screen grid place-items-center bg-[#222831] text-white p-4 sm:p-8">
+    <div className="min-h-screen grid place-items-center bg-[#222831] text-white p-4 sm:p-8 relative">
+      <BackButton to="/presidentsapproval" />
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-[#FFD369]">Event Approval</h1>
 

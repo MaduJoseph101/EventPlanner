@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import BackButton from './Backbutton';
+
 
 function Form() {
   const location = useLocation();
@@ -54,7 +56,9 @@ function Form() {
   }
 
   return (
-    <div className="min-h-screen bg-[#222831] text-white p-4 sm:p-8">
+    <div className="min-h-screen bg-[#222831] text-white p-4 sm:p-8 relative">
+          <BackButton to="/register" />
+
       {/* NOTIFICATION POPUP */}
 
       <div
@@ -65,7 +69,7 @@ function Form() {
         <p>{notification.message}</p>
       </div>
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto ">
         <h1 className="text-3xl sm:text-4xl font-bold mb-8 text-center">Register for an Event</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

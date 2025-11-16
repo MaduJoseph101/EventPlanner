@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import BackButton from './Backbutton';
 
 function AddEvent() {
 
@@ -60,7 +61,10 @@ function AddEvent() {
 
   return (
     <div className="min-h-screen bg-[#222831] text-white p-4 sm:p-8 flex items-center justify-center">
-      <div className="bg-[#393E46] p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-md md:max-w-2xl lg:max-w-4xl">
+      <div className="relative bg-[#393E46] p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-md md:max-w-2xl lg:max-w-4xl">
+
+        <BackButton to="/presidentsapproval" />
+        
         <h1 className="text-3xl font-bold mb-8 text-center text-[#FFD369]">Add a New Event</h1>
         
         <form onSubmit={SubmitForm}>

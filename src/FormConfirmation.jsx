@@ -30,6 +30,7 @@ function FormConfirmation() {
     );
   }
 
+  // REGISTRATION DATE
 let date = new Date();
 let day = date.getDate();
 let month = date.getMonth();
@@ -45,7 +46,7 @@ let year = date.getFullYear();
         <div className="flex justify-center mb-4">
           <div className="bg-green-500 rounded-full p-3">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              <path strokeLinecap="round" strokeLinejoin ="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
         </div>
@@ -66,24 +67,27 @@ let year = date.getFullYear();
             <p className="text-sm text-gray-400 uppercase tracking-wider md:text-md">Event</p>
             <h2 className="text-2xl font-bold text-white mb-4 md:text-3xl">{details.title}</h2> 
             
-            <div className="flex items-center text-gray-300">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              <span className='md:text-lg'>{details.location}</span>
-            </div>
-            
-            <div className="flex items-center text-gray-300 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              <span className='md:text-lg'>{details.date}</span>
-            </div>
-            
-            <div className="flex items-center text-gray-300 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              <span className='md:text-lg'>{details.time}</span>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+              <div className="flex items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span className='md:text-lg'>{details.location}</span>
 
-            <div className="flex items-center text-gray-300 mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
-              <span className='md:text-lg'>{details.ticket ? `₦${details.ticket}` : 'Free'}</span>
+              </div>
+              
+              <div className="flex items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <span className='md:text-lg'>{details.date}</span>
+              </div>
+              
+              <div className="flex items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span className='md:text-lg'>{details.time}</span>
+              </div>
+
+              <div className="flex items-center text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-[#e4a238] md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" /></svg>
+                <span className='md:text-lg'>{details.ticket ? `₦${details.ticket}` : 'Free'}</span>
+              </div>
             </div>
             
           </div>

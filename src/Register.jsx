@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import BackButton from './Backbutton';
 
 function Register() {
     const events = [{
@@ -121,7 +122,9 @@ function Register() {
 
     return (
         <>
-<div className='min-h-screen bg-[#222831] py-12 px-4 sm:px-6 lg:px-8'>
+<div className='min-h-screen bg-[#222831] py-12 px-4 sm:px-6 lg:px-8 relative'>
+    <BackButton to="/student" />        
+
     <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl md:text-5xl font-bold text-white text-center mb-12 lg:mb-16'>Upcoming Events</h1>
 
