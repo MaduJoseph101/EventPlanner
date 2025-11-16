@@ -89,7 +89,7 @@ You can use the following dummy credentials to test the application:
 ### Admin Login
 
 -   **Username:** `Admin`
--   **Password:** `admin123`
+-   **Password:** `1234`
 
 ---
 
