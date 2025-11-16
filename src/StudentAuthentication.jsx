@@ -5,7 +5,7 @@ function StudentAuthentication() {
 
 let AdminDetails = {
     username: "Student",
-    password: 220502043,
+    password: 1234,
 };
 
 let userName = useRef();

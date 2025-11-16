@@ -75,6 +75,23 @@ Make sure you have the following installed on your system:
 -   `npm run preview`: Serves the production build locally.
 
 ---
+## Credentials
+
+**Note:** This project is currently a front-end demonstration and does not include a backend server or database. The credentials below are hardcoded for testing and demonstration purposes, allowing you to explore the application's features from different user roles.
+
+You can use the following dummy credentials to test the application:
+
+### Student Login
+
+-   **Username:** `Student`
+-   **Password:** `1234`
+
+### Admin Login
+
+-   **Username:** `Admin`
+-   **Password:** `admin123`
+
+---
 
 ## 📂 Project Structure
 
