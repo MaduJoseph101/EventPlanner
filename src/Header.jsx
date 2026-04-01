@@ -15,7 +15,7 @@ function Header() {
             <h1 className=' text-2xl select-none'>BITXBASE</h1>
 
              {/* DESKTOP NAVIGATION */}
-            <nav className='hidden md:flex items-center'>
+            <nav className='hidden md:flex lg:flex  items-center'>
                 <ol className='flex gap-8 text-[18px] cursor-pointer'>
                     <li><NavLink to="/" className={getNavLinkClass}>Home</NavLink></li>
                     <li><NavLink to="/about" className={getNavLinkClass}>About</NavLink></li>

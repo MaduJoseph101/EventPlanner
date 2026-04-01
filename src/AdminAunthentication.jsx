@@ -5,7 +5,7 @@ function AdminAunthentication() {
 
 let AdminDetails = {
     username: "Admin",
-    password: 1234,
+    password: 4569,
 };
 
 let userName = useRef();

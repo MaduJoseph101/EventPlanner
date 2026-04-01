@@ -27,7 +27,7 @@ function Form() {
   const [notification, setNotification] = useState(
     { 
       show: false, 
-      message: 'Invalid Matric Number.' 
+      message: 'Matric Number must be 9 digits.' 
     });
 
   let navigate = useNavigate();
@@ -40,18 +40,17 @@ function Form() {
   let FormSubmit =(e)=>{
     e.preventDefault();
 
-    if (StudentData.matric_number.length !== 9) {
+    if (StudentData.matric_number.trim().length !== 9) {
       setNotification({ 
         show: true, 
-        message: 'Invalid Matric Number.'
+        message: 'Matric Number must be 9 digits.'
        });
       
-      const timer = setTimeout(() => setNotification({ show: false, message: 'Invalid Matric Number.' }), 3000);
+      const timer = setTimeout(() => setNotification({ show: false, message: 'Matric Number must be 9 digits.' }), 3000);
       return;
     }
 
     navigate('/formconfirmation', { state: { formdetails: {...StudentData, ...event } } });
-    navigate('/formconfirmation', { state: { formdetails: { ...StudentData, ...event } } });
 
   }
 
