@@ -8,12 +8,12 @@ A modern, responsive web application designed to streamline event management wit
 
 ---
 
-## 🌟 Overview
+## Overview
 
 BITXBASE is built to enhance campus life by making event organization and participation effortless. It features a clean, intuitive interface that works beautifully on both desktop and mobile devices. With subtle animations and a consistent, modern theme, it offers a delightful user experience.
 
 
-## ✨ Key Features
+##  Key Features
 
 -   **Responsive Design:** A beautiful and intuitive UI that works flawlessly on both desktop and mobile devices.
 -   **Dynamic Routing:** Utilizes React Router for a smooth, fast, single-page application experience.
@@ -25,7 +25,7 @@ BITXBASE is built to enhance campus life by making event organization and partic
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **Frontend:** [React.js](https://reactjs.org/)
 -   **Bundler:** [Vite](https://vitejs.dev/)
@@ -35,7 +35,7 @@ BITXBASE is built to enhance campus life by making event organization and partic
 
 ---
 
-## 🚀 Local Development
+## Local Development
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
@@ -93,7 +93,7 @@ You can use the following dummy credentials to test the application:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 The project is organized with a clear and scalable structure:
 
@@ -112,7 +112,7 @@ src/
 
 ---
 
-## ✍️ Author
+## Author
 
 **Madu Joseph**
 
